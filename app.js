@@ -1,9 +1,12 @@
-document.getElementById("tweetButton").addEventListener("click", function() {
-    const newTweet = document.querySelector('#tweetInput');
-    if(newTweet != ""){
-        let newDiv = document.createElement('div');
-        newDiv.setAttribute("class", )
-    }
+const mainTweets = document.getElementById("mainTweets");
 
+const enterTweets = document.getElementById("tweetForm");
+
+enterTweets.addEventListener('submit', function(e){
+    e.preventDefault();
+    let newTweet = document.querySelector('#tweetInput');
+    let newDiv = document.createElement('div');
+    newDiv.innerText = newTweet.value;
+    mainTweets.appendChild(newDiv);
+    newTweet.value = '';
 })
-
